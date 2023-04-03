@@ -1,3 +1,6 @@
+Using Data Through props
+
+
 import './ExpenseItem.css';
 
 function ExpenseItem(props){
