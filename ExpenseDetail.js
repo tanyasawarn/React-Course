@@ -1,3 +1,5 @@
+Created ExpenseDetails folder
+
 import ExpenseItem from "./ExpenseItem";
 function ExpenseDetail(props){
    const title =props.title;
