@@ -1,6 +1,3 @@
-Passing Data Through Props
-
-
 
 import './App.css';
 import ExpenseItem from './components/ExpenseItem';
@@ -29,29 +26,23 @@ function App() {
     location:'House'
   },
 ]
+const expenseItem=[];
+for(let i=0;i<expenses.length;i++)
+{
+    expenseItem.push(
+      <ExpenseItem
+    key={expenses[i].id}
+    title={expenses[i].title}
+    amount={expenses[i].amount}
+    date={expenses[i].date}
+    location={expenses[i].location}
+   />
+    );
+}
   return (
     <div>
         <h2>Let's get started</h2>
-        <ExpenseItem
-          title={expenses[0].title}
-          amount={expenses[0].amount}
-          date={expenses[0].date}
-          location={expenses[0].location}
-       ></ExpenseItem>
-        <ExpenseItem
-        title={expenses[1].title}
-          amount={expenses[1].amount}
-          date={expenses[1].date}
-          location={expenses[1].location}
-       ></ExpenseItem>
-        <ExpenseItem 
-          title={expenses[2].title}
-          amount={expenses[2].amount}
-          date={expenses[2].date}
-          location={expenses[2].location}
-         ></ExpenseItem>
-        
-        
+       {expenseItem}
     </div>
   );
 }
