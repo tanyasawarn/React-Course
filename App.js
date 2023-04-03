@@ -1,3 +1,5 @@
+Using for loop to show expense component
+
 
 import './App.css';
 import ExpenseItem from './components/ExpenseItem';
